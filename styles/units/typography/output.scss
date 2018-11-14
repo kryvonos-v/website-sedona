@@ -1,0 +1,24 @@
+@import "utils";
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: normal;
+  src: local('PT Sans'),
+        url('../fonts/pt-sans/ptsans.woff2') format('woff2'),
+        url('../fonts/pt-sans/ptsans.woff') format('woff');
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: bold;
+  src: local('PT Sans'),
+        url('../fonts/pt-sans/ptsansbold.woff2') format('woff2'),
+        url('../fonts/pt-sans/ptsansbold.woff') format('woff');
+}
+
+html, body {
+  font-family: "PT Sans";
+  font-weight: normal;
+}
