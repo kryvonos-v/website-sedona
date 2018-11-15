@@ -12,16 +12,56 @@
 }
 
 .navbar__brand {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  display: flex;
+  min-height: 3rem;
+
+  @include tablet {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.navbar__logo-link {
+  width: 140px;
+  
+  @include mobile {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.navbar__logo {
+  width: auto;
+  display: block;
+}
+
+.navbar__burger-button {
+  margin-left: auto;
+  border: 0;
+  padding: 15px;
+  background-color: transparent;
+  -webkit-appearance: none;
+  cursor: pointer;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.navbar__burger-icon {
+  width: 30px;
 }
 
 .navbar__menu {
+  display: none;
   width: 100%;
 
   @include mobile {
-    padding-top: 0.75rem;
+    padding-top: 2rem;
     padding-bottom: 0.75rem;
     text-align: center;
   }
