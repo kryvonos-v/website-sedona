@@ -1738,6 +1738,11 @@ html, body {
     display: flex;
   }
 }
+@media screen and (max-width: 768px) {
+  .navbar__menu--active-mobile {
+    display: block;
+  }
+}
 
 @media screen and (min-width: 769px), print {
   .navbar__menu-item {

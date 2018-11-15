@@ -69,6 +69,12 @@
   @include tablet {
     display: flex;
   }
+
+  &--active-mobile {
+    @include mobile {
+      display: block;
+    }
+  }
 }
 
 .navbar__menu-item {

@@ -15,14 +15,14 @@
           <img class="navbar__logo" width="138" height="70" src="./images/logo.png" alt="Логотип City of Sedona" />
         </a>
 
-        <button type="button" class="navbar__burger-button" aria-label="toggle main menu" aria-expanded="false" data-target="mainMenu">
+        <button id="main-menu-switcher" type="button" class="navbar__burger-button" aria-label="toggle main menu" aria-expanded="false" data-target="main-menu">
           <svg class="navbar__burger-icon" viewBox="0 0 30 22" aria-hidden="true">
             <path d="M2 4h26c1.1 0 2-.9 2-2s-.9-2-2-2H2C.9 0 0 .9 0 2s.9 2 2 2zm26 5H2c-1.1 0-2 .9-2 2s.9 2 2 2h26c1.1 0 2-.9 2-2s-.9-2-2-2zm0 9H2c-1.1 0-2 .9-2 2s.9 2 2 2h26c1.1 0 2-.9 2-2s-.9-2-2-2z" fill="#81b3d2"/>
           </svg>        
         </button>
       </div>
 
-      <ul id="mainMenu" class="navbar__menu">
+      <ul id="main-menu" class="navbar__menu">
         <li class="navbar__menu-item">
           <a href="#" class="navbar__link navbar__link--active">Информация</a>
         </li>
@@ -152,5 +152,7 @@
       <span>Website by</span> <img width="115" height="41" src="./icons/htmlacademy.svg" alt="Логотип HtmlAcademy" />
     </p>
   </footer>
+
+  <script src="./scripts/components/navbar.js" async></script>
 </body>
 </html>
