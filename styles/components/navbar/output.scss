@@ -1,0 +1,71 @@
+@import "../../units/colors/utils";
+@import "../../units/typography/utils";
+@import "../../vendors/bulma/sass/utilities/all";
+
+.navbar {
+  position: relative;
+  background: #FFF;
+
+  @include tablet {
+    display: flex;
+  }
+}
+
+.navbar__brand {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navbar__menu {
+  width: 100%;
+
+  @include mobile {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    text-align: center;
+  }
+
+  @include tablet {
+    display: flex;
+  }
+}
+
+.navbar__menu-item {
+  @include tablet {
+    display: flex;
+    flex-basis: 0;
+    flex-grow: 1;
+    justify-content: center;
+  }
+
+  &--margin-for-logo {
+    @include tablet {
+      margin-right: 20%;
+    }
+  }
+}
+
+.navbar__link {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  font-size: $typography-text-small;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $color-primary-text;
+
+  @include tablet {
+    display: flex;
+    align-items: center;
+    padding: 1.25rem 1rem;
+  }
+
+  &:hover {
+    color: $color-secondary;
+  }
+
+  &--active {
+    color: $color-secondary;
+  }
+}

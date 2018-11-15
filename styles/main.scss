@@ -5,3 +5,16 @@
 
 @import "units/base/output";
 @import "units/typography/output";
+
+@import "components/navbar/output";
+
+.container {
+  max-width: 1050px;
+}
+
+.visibility-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0, 0, 0, 0);
+}

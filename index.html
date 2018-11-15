@@ -7,18 +7,34 @@
   <title>Седона — небольшой городок в Аризоне, заслуживающий большего!</title>
   <link rel="stylesheet" href="./styles/main.css" />
 </head>
-<body>
+<body class="body">
   <header>
-    <nav>
-      <a href="#">
-        <img width="138" height="70" src="./images/logo.png" alt="Логотип City of Sedona" />
-      </a>
+    <nav class="navbar">
+      <div class="navbar__brand">
+        <a href="#" class="navbar-item">
+          <img width="138" height="70" src="./images/logo.png" alt="Логотип City of Sedona" />
+        </a>
 
-      <ul>
-        <li><a href="#">Информация</a></li>
-        <li><a href="#">Фото и видео</a></li>
-        <li><a href="#">Карта штата</a></li>
-        <li><a href="#">Гостиницы</a></li>
+        <!-- <button type="button" class="navbar-burger burger" aria-label="toggle main menu" aria-expanded="false" data-target="mainMenu">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button> -->
+      </div>
+
+      <ul id="mainMenu" class="navbar__menu">
+        <li class="navbar__menu-item">
+          <a href="#" class="navbar__link navbar__link--active">Информация</a>
+        </li>
+        <li class="navbar__menu-item navbar__menu-item--margin-for-logo">
+          <a href="#" class="navbar__link">Фото и видео</a>
+        </li>
+        <li class="navbar__menu-item">
+          <a href="#" class="navbar__link">Карта штата</a>
+        </li>
+        <li class="navbar__menu-item">
+          <a href="#" class="navbar__link">Гостиницы</a>
+        </li>
       </ul>
     </nav>
   </header>
