@@ -1649,7 +1649,7 @@ body {
   src: local("PT Sans"), url("../fonts/pt-sans/ptsansbold.woff2") format("woff2"), url("../fonts/pt-sans/ptsansbold.woff") format("woff");
 }
 html, body {
-  font-family: "PT Sans";
+  font-family: "PT Sans", serif;
   font-weight: normal;
 }
 
@@ -1701,7 +1701,7 @@ html, body {
 }
 
 .navbar__logo-link {
-  width: 140px;
+  width: 9rem;
 }
 @media screen and (max-width: 768px) {
   .navbar__logo-link {
@@ -1714,7 +1714,7 @@ html, body {
 }
 
 .navbar__logo {
-  width: auto;
+  width: 100%;
   display: block;
 }
 
@@ -1795,62 +1795,65 @@ html, body {
   color: #766357;
 }
 
-@keyframes spinAround {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
-}
-.is-unselectable {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.is-overlay {
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
 .greeting-section {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 4rem 2rem;
-  min-height: 300px;
-  background-image: url("../images/background-image-bottom-shape-mobiles.png"), url("../images/red-rocks-mobiles.jpg");
-  background-repeat: no-repeat, no-repeat;
-  background-size: contain, cover;
-  background-position: bottom, center;
+  padding: 2rem;
+  min-height: 510px;
+  overflow: hidden;
 }
-@media screen and (min-width: 769px), print {
-  .greeting-section {
-    min-height: 500px;
-    background-image: url("../images/background-image-bottom-shape.png"), url("../images/red-rocks.jpg");
-    background-position: bottom, 0 20%;
-  }
+.greeting-section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 100px;
+  background-image: url("../images/background-image-bottom-shape.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.greeting-section > * {
+  position: relative;
+}
+
+.greeting-section__background-picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .greeting-section__background-image {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
   height: auto;
+  min-width: 100%;
+  min-height: 100%;
+  max-width: none;
+}
+@supports (object-fit: cover) {
+  .greeting-section__background-image {
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: none;
+    object-fit: cover;
+    object-position: center top;
+  }
 }
 
 .greeting-section__sedona-image {
-  margin-top: 3.5rem;
-  margin-bottom: 3.5rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 /*# sourceMappingURL=main.css.map */

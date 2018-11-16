@@ -1,36 +1,60 @@
-@import "../../vendors/bulma/sass/utilities/all";
-
 .greeting-section {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 4rem 2rem;
-  min-height: 300px;
-  background-image: url('../images/background-image-bottom-shape-mobiles.png'),
-                    url('../images/red-rocks-mobiles.jpg');
-  background-repeat: no-repeat, no-repeat;
-  background-size: contain, cover;
-  background-position: bottom, center;
+  padding: 2rem;
+  min-height: 510px;
+  overflow: hidden;
 
-  @include tablet {
-    min-height: 500px;
-    background-image: url('../images/background-image-bottom-shape.png'),
-                      url('../images/red-rocks.jpg');
-    background-position: bottom, 0 20%;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 100px;
+    background-image: url('../images/background-image-bottom-shape.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
   }
+}
+
+.greeting-section > * {
+  position: relative;
+}
+
+.greeting-section__background-picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .greeting-section__background-image {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
   height: auto;
+  min-width: 100%;
+  min-height: 100%;
+  max-width: none;
+
+  @supports (object-fit: cover) {
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: none;
+    object-fit: cover;
+    object-position: center top;
+  }
 }
 
 .greeting-section__sedona-image {
-  margin-top: 3.5rem;
-  margin-bottom: 3.5rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }

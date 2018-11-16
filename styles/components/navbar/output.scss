@@ -24,7 +24,7 @@
 }
 
 .navbar__logo-link {
-  width: 140px;
+  width: 9rem;
   
   @include mobile {
     position: absolute;
@@ -36,7 +36,7 @@
 }
 
 .navbar__logo {
-  width: auto;
+  width: 100%;
   display: block;
 }
 

@@ -44,10 +44,14 @@
 
     <section class="greeting-section">
       <h2 class="visually-hidden">Вступительный раздел с баннером о Седоне</h2>
-      <img class="greeting-section__background-image visually-hidden" src="./images/red-rocks.jpg" alt="Красные скалы возле Седоны" />
-      <img src="./images/welcome-to-the-gorgeous.png" alt="Welcome to the gorgeous" />
-      <img class="greeting-section__sedona-image" src="./images/sedona.png" alt="Sedona" />
-      <img src="./images/grand-canyon-sucks.png" alt="Because the Grand Canyon sucks">
+      <picture class="greeting-section__background-picture">
+        <source media="(max-width: 420px)" srcset="./images/red-rocks-mobile.jpg, ./images/red-rocks-mobile@2x.jpg" />
+        <source media="(max-width: 768px)" srcset="./images/red-rocks-tablet.jpg, ./images/red-rocks-tablet@2x.jpg" />
+        <img class="greeting-section__background-image" src="./images/red-rocks.jpg" alt="Красные скалы возле Седоны" />
+      </picture>
+      <img role="presentation" src="./images/welcome-to-the-gorgeous.png" alt="Welcome to the gorgeous" />
+      <img role="presentation" class="greeting-section__sedona-image" src="./images/sedona.png" alt="Sedona" />
+      <img role="presentation" src="./images/grand-canyon-sucks.png" alt="Because the Grand Canyon sucks">
     </section>
 
     <p>Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
