@@ -44,11 +44,11 @@
 
     <section class="greeting-section">
       <h2 class="visually-hidden">Вступительный раздел с баннером о Седоне</h2>
-      <picture class="greeting-section__background-picture">
-        <source media="(max-width: 420px)" srcset="./images/red-rocks-mobile.jpg, ./images/red-rocks-mobile@2x.jpg 2x" />
-        <source media="(max-width: 768px)" srcset="./images/red-rocks-tablet.jpg, ./images/red-rocks-tablet@2x.jpg 2x" />
-        <img class="greeting-section__background-image" src="./images/red-rocks.jpg" alt="Красные скалы возле Седоны" />
-      </picture>
+      <!-- <picture class="greeting-section__background-picture"> -->
+        <!-- <source media="(max-width: 420px)" srcset="./images/red-rocks-mobile.jpg, ./images/red-rocks-mobile@2x.jpg 2x" /> -->
+        <!-- <source media="(max-width: 768px)" srcset="./images/red-rocks-tablet.jpg, ./images/red-rocks-tablet@2x.jpg 2x" /> -->
+      <img class="greeting-section__background-image" src="./images/red-rocks.jpg" alt="Красные скалы возле Седоны" />
+      <!-- </picture> -->
       <img role="presentation" src="./images/welcome-to-the-gorgeous.png" alt="Welcome to the gorgeous" />
       <img role="presentation" class="greeting-section__sedona-image" src="./images/sedona.png" alt="Sedona" />
       <img role="presentation" src="./images/grand-canyon-sucks.png" alt="Because the Grand Canyon sucks">
@@ -61,11 +61,17 @@
       </div>
 
       <section>
-        <h3>Настоящий городок</h3>
-        <p>#1</p>
-        <p>Cедона — не аттракцион для туристов, там течет своя жизнь</p>
+        <div class="marked-feature">
+          <div class="marked-feature__text-box">
+            <h3 class="marked-feature__heading">Настоящий городок</h3>
+            <p class="marked-feature__number">#1</p>
+            <p class="marked-feature__description">Cедона — не аттракцион для туристов, там течет своя жизнь</p>
+          </div>
 
-        <img src="./images/sedona-camp.jpg" alt="Настоящий годок в Седоне" />
+          <figure class="marked-feature__image-box">
+            <img class="marked-feature__image" src="./images/sedona-camp.jpg" alt="Настоящий годок в Седоне" />
+          </figure>
+        </div>
 
         <ul>
           <li>
