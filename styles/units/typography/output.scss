@@ -18,7 +18,12 @@
         url('../fonts/pt-sans/ptsansbold.woff') format('woff');
 }
 
-html, body {
+html {
   font-family: "PT Sans", serif;
   font-weight: normal;
+}
+
+body {
+  font-family: inherit;
+  font-size: 0.875rem;
 }

@@ -1,0 +1,25 @@
+@import "../../units/typography/utils";
+@import "../../units/colors/utils";
+
+.sedona-features-section {
+  text-align: center;
+}
+
+.sedona-features-section__heading {
+  margin-top: 4rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 29rem;
+  font-size: $typography-h2;
+  line-height: 1.23;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  color: $color-primary-text;
+}
+
+.sedona-features-section__subheading {
+  margin-top: 1.875rem;
+  text-transform: uppercase;
+  color: $color-secondary-text;
+}
