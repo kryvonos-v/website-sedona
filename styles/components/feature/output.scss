@@ -1,0 +1,73 @@
+@import "../../units/colors/utils";
+
+.feature {
+}
+
+.feature--sub {
+  @include touch {
+    padding-top: 10px;
+    padding-left: 50px;
+    text-align: left;
+  }
+
+  @include tablet {
+    padding: 82px $section-tablet-padding-x;
+  }
+}
+
+.feature--sub + .feature--sub {
+  @include touch {
+    margin-top: 18px;
+  }
+}
+
+.feature__heading {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+  max-width: 10rem;
+  font-size: $typography-text-large;
+  line-height: 1;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $color-primary-text;
+
+  @include tablet {
+    font-size: $typography-h2;
+  }
+}
+
+.feature--sub .feature__heading {
+  @include touch {
+    max-width: none;
+  }
+}
+
+.feature__description {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 18rem;
+  text-transform: uppercase;
+}
+
+.feature--sub .feature__description {
+  @include touch {
+    max-width: none;
+  }
+}
+
+.feature__list {
+  @include tablet {
+    display: flex;
+  }
+}
+
+.feature__list-item {
+  @include tablet {
+    flex-basis: 33.33%;
+    flex-grow: 0;
+    flex-shrink: 1;
+    padding-top: 82px;
+    padding-bottom: 82px;
+  }
+}
