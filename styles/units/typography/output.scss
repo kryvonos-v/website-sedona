@@ -22,10 +22,11 @@
 html {
   font-family: "PT Sans", serif;
   font-weight: normal;
-  color: $color-secondary;
+  color: $color-secondary-text;
 }
 
 body {
   font-family: inherit;
   font-size: 0.875rem;
+  color: inherit;
 }

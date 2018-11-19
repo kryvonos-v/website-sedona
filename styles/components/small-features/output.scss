@@ -1,0 +1,12 @@
+@import "../../vendors/bulma/sass/utilities/all";
+
+.small-features {
+  @include tablet {
+    display: flex;
+  }
+}
+
+.small-features__item {
+  flex-basis: 33.33%;
+  flex-grow: 0;
+}
