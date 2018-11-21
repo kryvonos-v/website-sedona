@@ -124,35 +124,53 @@
       </div>
     </section>
 
-  <section>
-      <p>Заинтересовались?</p>
-      <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Cедоне</p>
+  <section class="find-hotel-section section">
+      <p class="heading-1 mb-heading-1">Заинтересовались?</p>
+      <p class="subheading mb-subheading">Укажите предполагаемые даты поездки, <br class="tablet:text-break">и мы покажем вам лучшие предложения гостиниц в Cедоне</p>
 
-      <form name="appartments-search" method="post">
-        <h2>Поиск гостиницы в Седоне</h2>
-        <p>
-          <label for="appartments-search-check-in">Дата заезда:</label>
-          <input id="appartments-search-check-in" type="date" />
-        </p>
-        <p>
-          <label for="appartments-search-check-out">Дата выезда:</label>
-          <input id="appartments-search-check-out" type="date" />
-        </p>
-        <p>
-          <label for="appartments-search-adults-amount">Взрослые:</label>
-          <input type="number" id="appartments-search-adults-amount" />
-        </p>
-        <p>
-          <label for="appartments-search-children-amount">Дети:</label>
-          <input type="number" id="appartments-search-children-amount" />
-        </p>
+      <form class="find-hotel-section__form find-hotel-form" name="appartments-search" method="post">
+        <header class="find-hotel-form__header">
+          <h2 class="find-hotel-form__heading heading-2">Поиск гостиницы в Седоне</h2>
+        </header>
 
-        <button type="submit">Найти</button>
+        <div class="find-hotel-form__body">
+          <table class="find-hotel-form__table">
+            <tr>
+              <td>
+                <label class="find-hotel-form__label" for="appartments-search-check-in">Дата заезда:</label>
+              </td>
+              <td>
+                <input class="input" id="appartments-search-check-in" type="date" name="check-in-date" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="find-hotel-form__label" for="appartments-search-check-out">Дата выезда:</label>
+              </td>
+              <td>
+                <input class="input" id="appartments-search-check-out" type="date" name="check-out-date" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="find-hotel-form__label" for="appartments-search-adults-amount">Взрослые:</label>
+              </td>
+              <td class="find-hotel-form__people-number">
+                <input class="input find-hotel-form__number-input" type="number" id="appartments-search-adults-amount" name="adults-number" />
+
+                <label class="find-hotel-form__label find-hotel-form__children-label" for="appartments-search-children-amount">Дети:</label>
+                <input class="input find-hotel-form__number-input" type="number" id="appartments-search-children-amount" name="children-number" />
+              </td>
+            </tr>
+          </table>
+
+          <button type="submit">Найти</button>
+        </div>
       </form>
     </section>
 
     <section>
-      <h2>Карта местности Седоны</h2>
+      <h2 class="visually-hidden">Карта местности Седоны</h2>
       <img src="./images/sedona-map.jpg" alt="Город, расположенный по обе стороны границы между округами Коконино и Явапай в северной области Долины Верде штата Аризона" />
     </section>
   </main>

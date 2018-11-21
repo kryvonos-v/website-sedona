@@ -1,0 +1,58 @@
+@import "utils";
+@import "../../units/colors/utils";
+
+.find-hotel-form {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 570px;
+  width: 100%;
+}
+
+.find-hotel-form__header {
+  padding: 30px 20px;
+  height: $find-hotel-form-header-height;
+  background-color: $color-secondary;
+}
+
+.find-hotel-form__heading {
+  color: #FFF;
+}
+
+.find-hotel-form__body {
+  padding: 55px 60px;
+  background-color: #FFF;
+}
+
+.find-hotel-form__table {
+  width: 100%;
+}
+
+.find-hotel-form__table td {
+  padding-bottom: 30px;
+  vertical-align: middle;
+}
+
+.find-hotel-form__table tr:last-child td {
+  padding-bottom: 0;
+}
+
+.find-hotel-form__people-number {
+  display: flex;
+  align-items: center;
+}
+
+.find-hotel-form__children-label {
+  flex-grow: 1;
+  margin-left: 15px;
+  margin-right: 30px;
+  text-align: right;
+}
+
+.find-hotel-form__number-input {
+  max-width: 115px;
+}
+
+.find-hotel-form__label {
+  font-weight: bold;
+  text-transform: uppercase;
+}
