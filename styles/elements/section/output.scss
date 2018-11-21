@@ -1,0 +1,12 @@
+@import "utils";
+@import "../../vendors/bulma/sass/utilities/all";
+
+.section {
+  padding-left: $section-padding-x;
+  padding-right: $section-padding-x;
+
+  @include tablet {
+    padding-left: $section-tablet-padding-x;
+    padding-right: $section-tablet-padding-x;
+  }
+}

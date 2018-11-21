@@ -1,0 +1,169 @@
+@import "../../units/colors/utils";
+@import "../../elements/section/utils";
+
+.feature {
+  position: relative;
+}
+
+.feature--tablet-reversed {
+  flex-direction: row-reverse;
+}
+
+.feature--primary {
+  @include tablet {
+    display: flex;
+    min-height: 250px;
+  }
+}
+
+.feature--small {
+  position: relative;
+  padding-top: 25px;
+  padding-bottom: 30px;
+  background-color: $color-app-background;
+
+  @include tablet {
+    padding-top: 45px;
+    padding-bottom: 66px;
+  }
+}
+
+.feature--small + .feature--small::before {
+  @include touch {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: $section-padding-x;
+    right: $section-padding-x;;
+    height: 1px;
+    background-color: $color-divider-dark;
+  }
+}
+
+.feature--sub {
+  @include touch {
+    padding-top: 10px;
+    padding-left: 50px;
+    text-align: left;
+  }
+
+  @include tablet {
+    padding: 164px $section-tablet-padding-x 82px;
+  }
+}
+
+.feature--sub + .feature--sub {
+  @include touch {
+    margin-top: 18px;
+  }
+}
+
+.feature__heading {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+  max-width: 9.5rem;
+  font-size: $typography-text-large;
+  line-height: 1;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $color-primary-text;
+
+  @include tablet {
+    font-size: $typography-h2;
+  }
+}
+
+.feature--primary .feature__heading {
+  color: #FFF;
+}
+
+.feature--small .feature__heading {
+  color: $color-secondary-text;
+
+  @include touch {
+    max-width: none;
+  }
+}
+
+.feature--sub .feature__heading {
+  @include touch {
+    max-width: none;
+  }
+}
+
+.feature__icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: auto;
+
+  @include tablet {
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    height: 75px;
+  }
+}
+
+.feature__description {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 17rem;
+  text-transform: uppercase;
+}
+
+.feature--sub .feature__description {
+  @include touch {
+    max-width: none;
+  }
+}
+
+.feature__description-box {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-transform: uppercase;
+  color: $color-text;
+  background-color: $color-primary;
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 33.33%;
+    padding-top: 53px;
+    padding-bottom: 53px;
+  }
+}
+
+.feature__number {
+  margin-bottom: 15px;
+  font-family: "PT Sans", "Aria", sans-serif;
+  font-weight: 400;
+}
+
+.feature__image-box {
+  @include tablet {
+    position: relative;
+    overflow: hidden;
+    flex-basis: 66.66%;
+  }
+}
+
+.feature__image {
+  display: block;
+  
+  @include tablet {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+  }
+}

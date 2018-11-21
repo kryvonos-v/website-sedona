@@ -1,0 +1,21 @@
+@import "../find-hotel-form/utils";
+
+.find-hotel-section {
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 85px;
+
+  @include tablet {
+    padding-top: 56px;
+  }
+}
+
+.find-hotel-section__form {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -$find-hotel-form-header-height;
+}

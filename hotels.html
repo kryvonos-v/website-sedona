@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Поиск отелей в Седоне</title>
+</head>
+<body class="body">
+  <header>
+    <nav class="navbar">
+      <div class="navbar__brand">
+        <a href="#" class="navbar__logo-link">
+          <img class="navbar__logo" width="138" height="70" src="./images/logo.png" alt="Логотип City of Sedona" />
+        </a>
+
+        <button id="main-menu-switcher" type="button" class="navbar__burger-button" aria-label="toggle main menu" aria-expanded="false" data-target="main-menu">
+          <svg class="navbar__burger-icon" viewBox="0 0 30 22" aria-hidden="true">
+            <path d="M2 4h26c1.1 0 2-.9 2-2s-.9-2-2-2H2C.9 0 0 .9 0 2s.9 2 2 2zm26 5H2c-1.1 0-2 .9-2 2s.9 2 2 2h26c1.1 0 2-.9 2-2s-.9-2-2-2zm0 9H2c-1.1 0-2 .9-2 2s.9 2 2 2h26c1.1 0 2-.9 2-2s-.9-2-2-2z" fill="#81b3d2"/>
+          </svg>        
+        </button>
+      </div>
+
+      <ul id="main-menu" class="navbar__menu">
+        <li class="navbar__menu-item">
+          <a href="#" class="navbar__link navbar__link--active">Информация</a>
+        </li>
+        <li class="navbar__menu-item navbar__menu-item--margin-for-logo">
+          <a href="#" class="navbar__link">Фото и видео</a>
+        </li>
+        <li class="navbar__menu-item">
+          <a href="#" class="navbar__link">Карта штата</a>
+        </li>
+        <li class="navbar__menu-item">
+          <a href="#" class="navbar__link">Гостиницы</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="visually-hidden">Поиск отелей в Седоне</h1>
+
+    <section>
+      <h2 class="visually-hidden">Форма поиска</h2>
+
+      <form id="apartments-search" method="get">
+        <fieldset>
+          <legend>Инфраструктура:</legend>
+          <label>
+            <input type="checkbox" name="features[]" value="pool">
+            Басейн
+          </label>
+          <label>
+            <input type="checkbox" name="features[]" value="pool">
+            Паркова
+          </label>
+          <label>
+            <input type="checkbox" name="features[]" value="pool">
+            Wi-Fi
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Тип жилья:</legend>
+          <label>
+            <input type="checkbox" name="apartments-type[]" value="hotel">
+            Гостиница
+          </label>
+          <label>
+            <input type="checkbox" name="apartments-type[]" value="motel">
+            Мотель
+          </label>
+          <label>
+            <input type="checkbox" name="apartments-type[]" value="aparments">
+            Апартаменты
+          </label>
+        </fieldset>
+
+        <div>
+          Стоимость в сутки:
+          <div>
+            <span>От 0</span>
+            <span>От 3000</span>
+          </div>
+          <input type="range" name="price" />
+        </div>
+
+        <button type="submit">Показать</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Результаты поиска</h2>
+      <span>Найдено: 3</span>
+
+      <fieldset>
+        <legend>Сортировка:</legend>
+        <label>
+          <input type="radio" name="sort[]" value="price" form="apartments-search">
+          По цене
+        </label>
+        <label>
+          <input type="radio" name="sort[]" value="type" form="apartments-search">
+          По типу
+        </label>
+        <label>
+          <input type="radio" name="sort[]" value="rating" form="apartments-search">
+          По рейтингу
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Порядок следования:</legend>
+        <label>
+          <input type="radio" name="order[]" value="desc" form="apartments-search">
+          По убиванию
+        </label>
+        <label>
+          <input type="radio" name="order[]" value="asc" form="apartments-search">
+          По возрастанию
+        </label>
+      </fieldset>
+      
+      <ul>
+        <li>
+          <header>
+            <h3>Amara Resort & SPA</h3>
+            <div aria-label="Количество звезд: 4">
+              <img src="./icons/star.svg" alt="Икона звездочки" />
+              <img src="./icons/star.svg" alt="Икона звездочки" />
+              <img src="./icons/star.svg" alt="Икона звездочки" />
+              <img src="./icons/star.svg" alt="Икона звездочки" />
+            </div>
+            <span>Рейтинг: 8,5</span>
+            <span>Гостиница</span>
+            <span>От 3000 Р.</span>
+          </header>
+          <img src="./images/hotels/amara-resort.png" alt="Вид на гостиницу Amara Resort & SPA" width="140" />
+          <p>
+            <a href="#">Подробнее</a>
+            <a href="#">Забронировать</a>
+          </p>
+        </li>
+        <li>
+          <header>
+            <h3>Desert Quila Inn</h3>
+            <div aria-label="Количество звезд: 3">
+              <img src="./icons/star.svg" alt="Икона звездочки" />
+              <img src="./icons/star.svg" alt="Икона звездочки" />
+              <img src="./icons/star.svg" alt="Икона звездочки" />
+            </div>
+            <span>Рейтинг: 8,9</span>
+            <span>Мотель</span>
+            <span>От 3000 Р.</span>
+          </header>
+          <img src="./images/hotels/desert-quail.png" alt="Вид на мотель Desert Quila Inn" width="140" />
+          <p>
+            <a href="#">Подробнее</a>
+            <a href="#">Забронировать</a>
+          </p>
+        </li>
+        <li>
+          <header>
+            <h3>Villas at Poco Diablo</h3>
+            <div aria-label="Количество звезд: 2">
+              <img src="./icons/star.svg" alt="Икона звездочки" />
+              <img src="./icons/star.svg" alt="Икона звездочки" />
+            </div>
+            <span>Рейтинг: 9,2</span>
+            <span>Гостиница</span>
+            <span>От 3000 Р.</span>
+          </header>
+          <img src="./images/hotels/villas-at-poco-diablo.jpg" alt="Вид на апартаменты Villas at Poco Diablo" width="140" />
+          <p>
+            <a href="#">Подробнее</a>
+            <a href="#">Забронировать</a>
+          </p>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      <span>#visitsedona</span>
+    </p>
+
+    <ul>
+      <li><a href="#">Twitter</a></li>
+      <li><a href="#">Facebook</a></li>
+      <li><a href="#">Youtube</a></li>
+    </ul>
+
+    <p>
+      <span>Website by</span> <img width="115" height="41" src="./icons/htmlacademy.svg" alt="Логотип HtmlAcademy" />
+    </p>
+  </footer>
+
+  <script src="./scripts/components/navbar.js" async></script>
+</body>
+</html>

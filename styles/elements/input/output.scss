@@ -1,0 +1,26 @@
+@import "../../units/colors/utils";
+
+.input {
+  display: inline-block;
+  border: 2px solid $color-form-control;
+  padding: 0.6em 1em;
+  width: 100%;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  font-weight: bold;
+  outline: none;
+  box-shadow: none;
+  background-color: $color-form-control;
+  transition: all 150ms ease-in-out;
+
+  &:hover {
+    border-color: $color-form-control-hover;
+    background-color: $color-form-control-hover;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $color-form-control-hover;
+    background-color: #FFF;
+  }
+}

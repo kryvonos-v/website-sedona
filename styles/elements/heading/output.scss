@@ -1,0 +1,22 @@
+@import "utils";
+@import "../../units/typography/utils";
+@import "../../units/colors/utils";
+
+.heading-1,
+.heading-2 {
+  @include heading;
+}
+
+.heading-1 {
+  font-size: $typography-h1;
+  line-height: 1.2;
+}
+
+.mb-heading-1 {
+  margin-bottom: 2rem;
+}
+
+.heading-2 {
+  font-size: $typography-h2;
+  line-height: 1.2;
+}

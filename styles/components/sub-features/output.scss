@@ -1,0 +1,19 @@
+@import "../../elements/section/utils";
+
+.sub-features {
+  @include touch {
+    padding: 25px $section-padding-x 35px;
+  }
+
+  @include tablet {
+    display: flex;
+  }
+}
+
+.sub-features__item {
+  @include tablet {
+    flex-basis: 33.33%;
+    flex-grow: 0;
+    flex-shrink: 1;
+  }
+}
